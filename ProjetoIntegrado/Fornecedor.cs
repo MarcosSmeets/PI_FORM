@@ -11,26 +11,15 @@ using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegrado
 {
-    public partial class Form1 : Form
+    public partial class Fornecedor : Form
     {
         private MySqlConnection mConn;
         private MySqlDataAdapter mAdapter;
         private DataSet mDataSet;
 
-
-        public Form1()
+        public Fornecedor()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,9 +28,8 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            string consultasql =
-                String.Format("INSERT INTO (CPF-PACIENTE, NOME-PACIENTE, END-PACIENTE, DATA-NASCT-PACIENTE) values ('{0}', '{1}', '{2}', '{3}')",
-                txtCpf.Text, txtNome.Text, txtEnd.Text, txtData.Text);
+            string consultasql = String.Format("INSERT INTO Fornecedor (CNPJ-FORNECEDOR, NOME-FORNECEDOR, END-FORNECEDOR) Values ('{0}', '{1}','{2}')",
+                txtCNPJ.Text, txtNome.Text, txtEnd.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
             command.ExecuteNonQuery();
@@ -57,13 +45,12 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM PACIENTE ORDER BY id", mConn);
+            mAdapter = new MySqlDataAdapter("SELECT * FROM Fornecedor ORDER BY id", mConn);
 
-            mAdapter.Fill(mDataSet, "paciente");
+            mAdapter.Fill(mDataSet, "fornecedor");
 
             dataGridView1.DataSource = mDataSet;
-            dataGridView1.DataMember = "paciente";
-
+            dataGridView1.DataMember = "fornecedor";
         }
     }
 }
