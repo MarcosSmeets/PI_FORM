@@ -28,42 +28,48 @@ namespace ProjetoIntegrado
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        private void AbrirFormHija(object formhija)
+        {
+            if(this.panelConteiner.Controls.Count > 0)
+                this.panelConteiner.Controls.RemoveAt(0);
+            
+
+            Form fh = formhija as Form;
+
+            fh.TopLevel = false;
+
+            fh.Dock = DockStyle.Fill;
+
+            this.panelConteiner.Controls.Add(fh);
+            this.panelConteiner.Tag = fh;
+            fh.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mConn = new MySqlConnection("Persist Security Into=False; server=localhost; database=CTRL_VACINA;uid=root");
-
-            mConn.Open();
-
-            string consultasql =
-                String.Format("INSERT INTO (CPF-PACIENTE, NOME-PACIENTE, END-PACIENTE, DATA-NASCT-PACIENTE) values ('{0}', '{1}', '{2}', '{3}')",
-                txtCpf.Text, txtNome.Text, txtEnd.Text, txtData.Text);
-
-            MySqlCommand command = new MySqlCommand(consultasql, mConn);
-            command.ExecuteNonQuery();
-
-            mConn.Close();
+            AbrirFormHija(new Paciente());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Hospital_Click(object sender, EventArgs e)
         {
-            mDataSet = new DataSet();
+            AbrirFormHija(new Hospital());
+        }
 
-            mConn = new MySqlConnection("Persist Security Into=False; server=localhost; database=CTRL_VACINA;uid=root");
+        private void Fornecedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Fornecedor());
+        }
 
-            mConn.Open();
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM PACIENTE ORDER BY id", mConn);
+        }
 
-            mAdapter.Fill(mDataSet, "paciente");
-
-            dataGridView1.DataSource = mDataSet;
-            dataGridView1.DataMember = "paciente";
-
+        private void Vacina_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Vacina());
         }
     }
 }

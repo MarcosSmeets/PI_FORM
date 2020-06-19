@@ -41,6 +41,7 @@
             this.txtEnd = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,9 +53,9 @@
             this.CNPJ,
             this.Nome,
             this.Endereço});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 191);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(589, 275);
             this.dataGridView1.TabIndex = 0;
             // 
             // ID
@@ -84,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 35);
+            this.label1.Location = new System.Drawing.Point(20, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 1;
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 71);
+            this.label2.Location = new System.Drawing.Point(20, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 2;
@@ -102,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 105);
+            this.label3.Location = new System.Drawing.Point(20, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 3;
@@ -110,30 +111,30 @@
             // 
             // txtCNPJ
             // 
-            this.txtCNPJ.Location = new System.Drawing.Point(131, 28);
+            this.txtCNPJ.Location = new System.Drawing.Point(108, 58);
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.Size = new System.Drawing.Size(100, 20);
             this.txtCNPJ.TabIndex = 4;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(131, 64);
+            this.txtNome.Location = new System.Drawing.Point(108, 94);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 5;
             // 
             // txtEnd
             // 
-            this.txtEnd.Location = new System.Drawing.Point(131, 98);
+            this.txtEnd.Location = new System.Drawing.Point(108, 128);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(100, 20);
             this.txtEnd.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 135);
+            this.button1.Location = new System.Drawing.Point(290, 126);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 39);
+            this.button1.Size = new System.Drawing.Size(120, 30);
             this.button1.TabIndex = 7;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -141,19 +142,30 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(530, 135);
+            this.button2.Location = new System.Drawing.Point(468, 126);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 39);
+            this.button2.Size = new System.Drawing.Size(133, 30);
             this.button2.TabIndex = 8;
             this.button2.Text = "Consultar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(285, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "HOSPITAL";
             // 
             // Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEnd);
@@ -163,6 +175,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Hospital";
             this.Text = "Hospital";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -186,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereço;
+        private System.Windows.Forms.Label label4;
     }
 }

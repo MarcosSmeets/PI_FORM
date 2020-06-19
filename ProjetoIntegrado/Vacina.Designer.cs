@@ -41,6 +41,7 @@
             this.txtValid = new System.Windows.Forms.TextBox();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.Consultar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             this.ValidadVacina});
             this.dataGridView1.Location = new System.Drawing.Point(12, 199);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(581, 245);
             this.dataGridView1.TabIndex = 0;
             // 
             // ID
@@ -84,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 47);
+            this.label1.Location = new System.Drawing.Point(22, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 1;
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 81);
+            this.label2.Location = new System.Drawing.Point(22, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 2;
@@ -102,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 115);
+            this.label3.Location = new System.Drawing.Point(22, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 3;
@@ -110,28 +111,28 @@
             // 
             // txtPais
             // 
-            this.txtPais.Location = new System.Drawing.Point(155, 40);
+            this.txtPais.Location = new System.Drawing.Point(147, 68);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(100, 20);
             this.txtPais.TabIndex = 4;
             // 
             // txtFab
             // 
-            this.txtFab.Location = new System.Drawing.Point(155, 74);
+            this.txtFab.Location = new System.Drawing.Point(147, 102);
             this.txtFab.Name = "txtFab";
             this.txtFab.Size = new System.Drawing.Size(100, 20);
             this.txtFab.TabIndex = 5;
             // 
             // txtValid
             // 
-            this.txtValid.Location = new System.Drawing.Point(155, 115);
+            this.txtValid.Location = new System.Drawing.Point(147, 143);
             this.txtValid.Name = "txtValid";
             this.txtValid.Size = new System.Drawing.Size(100, 20);
             this.txtValid.TabIndex = 6;
             // 
             // Cadastrar
             // 
-            this.Cadastrar.Location = new System.Drawing.Point(343, 160);
+            this.Cadastrar.Location = new System.Drawing.Point(271, 160);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(124, 33);
             this.Cadastrar.TabIndex = 7;
@@ -141,7 +142,7 @@
             // 
             // Consultar
             // 
-            this.Consultar.Location = new System.Drawing.Point(576, 160);
+            this.Consultar.Location = new System.Drawing.Point(427, 160);
             this.Consultar.Name = "Consultar";
             this.Consultar.Size = new System.Drawing.Size(124, 33);
             this.Consultar.TabIndex = 8;
@@ -149,11 +150,22 @@
             this.Consultar.UseVisualStyleBackColor = true;
             this.Consultar.Click += new System.EventHandler(this.Consultar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(282, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "VACINAS";
+            // 
             // Vacina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Consultar);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.txtValid);
@@ -163,6 +175,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Vacina";
             this.Text = "Vacina";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -186,5 +199,6 @@
         private System.Windows.Forms.TextBox txtValid;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button Consultar;
+        private System.Windows.Forms.Label label4;
     }
 }
