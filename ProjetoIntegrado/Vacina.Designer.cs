@@ -38,13 +38,13 @@
             this.Cadastrar = new System.Windows.Forms.Button();
             this.Consultar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaisOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValidadVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,36 +141,6 @@
             this.label4.Text = "VACINAS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "COD-VACINA";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // NomeVacina
-            // 
-            this.NomeVacina.DataPropertyName = "NOME_VACINA";
-            this.NomeVacina.HeaderText = "Nome";
-            this.NomeVacina.Name = "NomeVacina";
-            // 
-            // PaisOrigem
-            // 
-            this.PaisOrigem.DataPropertyName = "PAIS-ORG-VACINA";
-            this.PaisOrigem.HeaderText = "Pais de Origem";
-            this.PaisOrigem.Name = "PaisOrigem";
-            // 
-            // DataFab
-            // 
-            this.DataFab.DataPropertyName = "DATA-FAB-VACINA";
-            this.DataFab.HeaderText = "Data de Fabricação";
-            this.DataFab.Name = "DataFab";
-            // 
-            // ValidadVacina
-            // 
-            this.ValidadVacina.DataPropertyName = "VALID-VACINA";
-            this.ValidadVacina.HeaderText = "Data de Validade";
-            this.ValidadVacina.Name = "ValidadVacina";
-            // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(147, 33);
@@ -186,6 +156,36 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Nome";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "COD_VACINA";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // NomeVacina
+            // 
+            this.NomeVacina.DataPropertyName = "NOME_VACINA";
+            this.NomeVacina.HeaderText = "Nome";
+            this.NomeVacina.Name = "NomeVacina";
+            // 
+            // PaisOrigem
+            // 
+            this.PaisOrigem.DataPropertyName = "PAIS_ORG_VACINA";
+            this.PaisOrigem.HeaderText = "Pais de Origem";
+            this.PaisOrigem.Name = "PaisOrigem";
+            // 
+            // DataFab
+            // 
+            this.DataFab.DataPropertyName = "DATA_FAB_VACINA";
+            this.DataFab.HeaderText = "Data de Fabricação";
+            this.DataFab.Name = "DataFab";
+            // 
+            // ValidadVacina
+            // 
+            this.ValidadVacina.DataPropertyName = "VALID_VACINA";
+            this.ValidadVacina.HeaderText = "Data de Validade";
+            this.ValidadVacina.Name = "ValidadVacina";
             // 
             // Vacina
             // 
@@ -225,12 +225,12 @@
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button Consultar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeVacina;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaisOrigem;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataFab;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValidadVacina;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label5;
     }
 }

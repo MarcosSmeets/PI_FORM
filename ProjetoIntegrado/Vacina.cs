@@ -29,7 +29,7 @@ namespace ProjetoIntegrado
             mConn.Open();
 
             string consultasql =
-                String.Format("INSERT INTO VACINA (PAIS-ORG-VACINA, DATA-FAB-VACINA, NOME_VACINA, VALID-VACINA) values ('{0}', '{1}', '{2}','{3}')",
+                String.Format("INSERT INTO VACINA (PAIS_ORG_VACINA, DATA_FAB_VACINA, NOME_VACINA, VALID_VACINA) values ('{0}', '{1}', '{2}','{3}')",
                 txtPais.Text, txtFab.Text,txtNome, txtValid.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
@@ -46,7 +46,7 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM VACINA ORDER BY id", mConn);
+            mAdapter = new MySqlDataAdapter("SELECT * FROM VACINA ORDER BY COD_VACINA", mConn);
 
             mAdapter.Fill(mDataSet, "vacina");
 

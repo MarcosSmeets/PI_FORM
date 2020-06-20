@@ -37,11 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,30 +126,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(578, 247);
             this.dataGridView1.TabIndex = 9;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "COD-FORNECEDOR";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.DataPropertyName = "CNPJ-FORNECEDOR";
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "NOME-FORNECEDOR";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Endereço
-            // 
-            this.Endereço.DataPropertyName = "END-FORNECEDOR";
-            this.Endereço.HeaderText = "Endereço";
-            this.Endereço.Name = "Endereço";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -159,6 +135,30 @@
             this.label4.Size = new System.Drawing.Size(160, 25);
             this.label4.TabIndex = 18;
             this.label4.Text = "FORNECEDOR";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "COD_FORNECEDOR";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // CNPJ
+            // 
+            this.CNPJ.DataPropertyName = "CNPJ_FORNECEDOR";
+            this.CNPJ.HeaderText = "CNPJ";
+            this.CNPJ.Name = "CNPJ";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "NOME_FORNECEDOR";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Endereço
+            // 
+            this.Endereço.DataPropertyName = "END_FORNECEDOR";
+            this.Endereço.HeaderText = "Endereço";
+            this.Endereço.Name = "Endereço";
             // 
             // Fornecedor
             // 
@@ -195,10 +195,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereço;
-        private System.Windows.Forms.Label label4;
     }
 }

@@ -39,12 +39,12 @@
             this.txtData = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.CODPACIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,9 +71,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 23;
-            this.label2.Text = "CNPJ";
+            this.label2.Text = "CPF";
             // 
             // label1
             // 
@@ -146,36 +146,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(577, 276);
             this.dataGridView1.TabIndex = 15;
             // 
-            // CODPACIENTE
-            // 
-            this.CODPACIENTE.DataPropertyName = "COD-PACIENTE";
-            this.CODPACIENTE.HeaderText = "ID";
-            this.CODPACIENTE.Name = "CODPACIENTE";
-            // 
-            // CPF
-            // 
-            this.CPF.DataPropertyName = "CPF-PACIENTE";
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "NOME-PACIENTE";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Endereço
-            // 
-            this.Endereço.DataPropertyName = "END-PACIENTE";
-            this.Endereço.HeaderText = "Endereço";
-            this.Endereço.Name = "Endereço";
-            // 
-            // DataNascimento
-            // 
-            this.DataNascimento.DataPropertyName = "DATA-NASCT-PACIENTE";
-            this.DataNascimento.HeaderText = "DataNascimento";
-            this.DataNascimento.Name = "DataNascimento";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -186,6 +156,36 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "PACIENTE";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // CODPACIENTE
+            // 
+            this.CODPACIENTE.DataPropertyName = "COD_PACIENTE";
+            this.CODPACIENTE.HeaderText = "ID";
+            this.CODPACIENTE.Name = "CODPACIENTE";
+            // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "CPF_PACIENTE";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "NOME_PACIENTE";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Endereço
+            // 
+            this.Endereço.DataPropertyName = "END_PACIENTE";
+            this.Endereço.HeaderText = "Endereço";
+            this.Endereço.Name = "Endereço";
+            // 
+            // DataNascimento
+            // 
+            this.DataNascimento.DataPropertyName = "DATA_NASCT_PACIENTE";
+            this.DataNascimento.HeaderText = "DataNascimento";
+            this.DataNascimento.Name = "DataNascimento";
             // 
             // Paciente
             // 
@@ -226,11 +226,11 @@
         private System.Windows.Forms.TextBox txtData;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODPACIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereço;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataNascimento;
-        private System.Windows.Forms.Label label5;
     }
 }

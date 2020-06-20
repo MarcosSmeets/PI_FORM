@@ -30,7 +30,7 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            string consultasql = String.Format("INSERT INTO HOSPITAL (CNPJ-HOSPITAL, NOME-HOSPITAL, END-HOSPITAL) Values ('{0}', '{1}','{2}')",
+            string consultasql = String.Format("INSERT INTO HOSPITAL (CNPJ_HOSPITAL, NOME_HOSPITAL, END_HOSPITAL) Values ('{0}', '{1}','{2}')",
                 txtCNPJ.Text, txtNome.Text, txtEnd.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
@@ -47,7 +47,7 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM Hospital ORDER BY id", mConn);
+            mAdapter = new MySqlDataAdapter("SELECT * FROM Hospital ORDER BY COD_HOSPITAL", mConn);
 
             mAdapter.Fill(mDataSet,"hospital");
 

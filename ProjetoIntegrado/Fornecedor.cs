@@ -28,7 +28,7 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            string consultasql = String.Format("INSERT INTO Fornecedor (CNPJ-FORNECEDOR, NOME-FORNECEDOR, END-FORNECEDOR) Values ('{0}', '{1}','{2}')",
+            string consultasql = String.Format("INSERT INTO Fornecedor (CNPJ_FORNECEDOR, NOME_FORNECEDOR, END_FORNECEDOR) Values ('{0}', '{1}','{2}')",
                 txtCNPJ.Text, txtNome.Text, txtEnd.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
@@ -45,7 +45,7 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM Fornecedor ORDER BY id", mConn);
+            mAdapter = new MySqlDataAdapter("SELECT * FROM Fornecedor ORDER BY COD_FORNECEDOR", mConn);
 
             mAdapter.Fill(mDataSet, "fornecedor");
 
