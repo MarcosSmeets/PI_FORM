@@ -29,8 +29,8 @@ namespace ProjetoIntegrado
             mConn.Open();
 
             string consultasql =
-                String.Format("INSERT INTO VACINA (PAIS-ORG-VACINA, DATA-FAB-VACINA, VALID-VACINA) values ('{0}', '{1}', '{2}')",
-                txtPais.Text, txtFab.Text, txtValid.Text);
+                String.Format("INSERT INTO VACINA (PAIS-ORG-VACINA, DATA-FAB-VACINA, NOME_VACINA, VALID-VACINA) values ('{0}', '{1}', '{2}','{3}')",
+                txtPais.Text, txtFab.Text,txtNome, txtValid.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
             command.ExecuteNonQuery();
@@ -52,6 +52,11 @@ namespace ProjetoIntegrado
 
             dataGridView1.DataSource = mDataSet;
             dataGridView1.DataMember = "vacina";
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

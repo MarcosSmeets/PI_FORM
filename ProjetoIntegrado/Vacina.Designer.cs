@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaisOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValidadVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +38,13 @@
             this.Cadastrar = new System.Windows.Forms.Button();
             this.Consultar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaisOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValidadVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +53,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.NomeVacina,
             this.PaisOrigem,
             this.DataFab,
             this.ValidadVacina});
@@ -57,30 +61,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(581, 245);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "COD-VACINA";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // PaisOrigem
-            // 
-            this.PaisOrigem.DataPropertyName = "PAIS-ORG-VACINA";
-            this.PaisOrigem.HeaderText = "Pais de Origem";
-            this.PaisOrigem.Name = "PaisOrigem";
-            // 
-            // DataFab
-            // 
-            this.DataFab.DataPropertyName = "DATA-FAB-VACINA";
-            this.DataFab.HeaderText = "Data de Fabricação";
-            this.DataFab.Name = "DataFab";
-            // 
-            // ValidadVacina
-            // 
-            this.ValidadVacina.DataPropertyName = "VALID-VACINA";
-            this.ValidadVacina.HeaderText = "Data de Validade";
-            this.ValidadVacina.Name = "ValidadVacina";
             // 
             // label1
             // 
@@ -154,17 +134,66 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(282, 9);
+            this.label4.Location = new System.Drawing.Point(310, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "VACINAS";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "COD-VACINA";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // NomeVacina
+            // 
+            this.NomeVacina.DataPropertyName = "NOME_VACINA";
+            this.NomeVacina.HeaderText = "Nome";
+            this.NomeVacina.Name = "NomeVacina";
+            // 
+            // PaisOrigem
+            // 
+            this.PaisOrigem.DataPropertyName = "PAIS-ORG-VACINA";
+            this.PaisOrigem.HeaderText = "Pais de Origem";
+            this.PaisOrigem.Name = "PaisOrigem";
+            // 
+            // DataFab
+            // 
+            this.DataFab.DataPropertyName = "DATA-FAB-VACINA";
+            this.DataFab.HeaderText = "Data de Fabricação";
+            this.DataFab.Name = "DataFab";
+            // 
+            // ValidadVacina
+            // 
+            this.ValidadVacina.DataPropertyName = "VALID-VACINA";
+            this.ValidadVacina.HeaderText = "Data de Validade";
+            this.ValidadVacina.Name = "ValidadVacina";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(147, 33);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nome";
             // 
             // Vacina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Consultar);
             this.Controls.Add(this.Cadastrar);
@@ -187,10 +216,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PaisOrigem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataFab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValidadVacina;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -200,5 +225,12 @@
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button Consultar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeVacina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaisOrigem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataFab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValidadVacina;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label5;
     }
 }
