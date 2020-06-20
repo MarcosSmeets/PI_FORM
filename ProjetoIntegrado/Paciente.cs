@@ -29,7 +29,7 @@ namespace ProjetoIntegrado
             mConn.Open();
 
             string consultasql =
-                String.Format("INSERT INTO (CPF_PACIENTE, NOME_PACIENTE, END_PACIENTE, DATA-NASCT_PACIENTE) values ('{0}', '{1}', '{2}', '{3}')",
+                String.Format("INSERT INTO Paciente ('CPF_PACIENTE', 'NOME_PACIENTE', 'END_PACIENTE', 'DATA-NASCT_PACIENTE') values ('{0}', '{1}', '{2}', '{3}')",
                 txtCpf.Text, txtNome.Text, txtEnd.Text, txtData.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);

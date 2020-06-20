@@ -29,7 +29,7 @@ namespace ProjetoIntegrado
             mConn.Open();
 
             string consultasql =
-                String.Format("INSERT INTO VACINA (PAIS_ORG_VACINA, DATA_FAB_VACINA, NOME_VACINA, VALID_VACINA) values ('{0}', '{1}', '{2}','{3}')",
+                String.Format("INSERT INTO VACINA ('PAIS_ORG_VACINA', 'DATA_FAB_VACINA', 'NOME_VACINA', 'VALID_VACINA') values ('{0}', '{1}', '{2}','{3}')",
                 txtPais.Text, txtFab.Text,txtNome, txtValid.Text);
 
             MySqlCommand command = new MySqlCommand(consultasql, mConn);
