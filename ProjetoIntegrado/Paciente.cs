@@ -45,8 +45,15 @@ namespace ProjetoIntegrado
             mConn = new MySqlConnection("Persist Security Into=False; server=localhost; database=CTRL_VACINA;uid=root");
 
             mConn.Open();
-
-            mAdapter = new MySqlDataAdapter("SELECT * FROM PACIENTE ORDER BY COD_PACIENTE", mConn);
+            try
+            {
+                mAdapter = new MySqlDataAdapter("select  A.COD_PACIENTE, A.CPF_PACIENTE, A.NOME_PACIENTE, A.END_PACIENTE, A.DATA_NASCT_PACIENTE, C.NOME_VACINA, C.VALID_VACINA, E.NOME_HOSPITAL from paciente A inner join registro B on A.COD_PACIENTE = B.PACIENTE_COD_PACIENTE inner join vacina C on C.COD_VACINA = B.VACINA_COD_VACINA inner join vacina_hospital D on D.VACINA_COD_VACINA = C.COD_VACINA inner join hospital E on E.COD_HOSPITAL = D.HOSPITAL_COD_HOSPITAL WHERE (A.CPF_PACIENTE = txtCpf.Text or upper(NOME_PACIENTE) like upper ('%txtNome.Text%'))", mConn);
+            }
+            catch
+            {
+                MessageBox.Show("Paciente não Cadastrado");
+            }
+            
 
             mAdapter.Fill(mDataSet, "paciente");
 

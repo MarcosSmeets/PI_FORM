@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,10 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +55,32 @@
             this.Endereço});
             this.dataGridView1.Location = new System.Drawing.Point(12, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(589, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 275);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "COD_HOSPITAL";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // CNPJ
+            // 
+            this.CNPJ.DataPropertyName = "CNPJ_HOSPITAL";
+            this.CNPJ.HeaderText = "CNPJ";
+            this.CNPJ.Name = "CNPJ";
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "NOME_HOSPITAL";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Endereço
+            // 
+            this.Endereço.DataPropertyName = "END_HOSPITA";
+            this.Endereço.HeaderText = "Endereço";
+            this.Endereço.Name = "Endereço";
             // 
             // label1
             // 
@@ -135,30 +159,6 @@
             this.label4.Size = new System.Drawing.Size(115, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "HOSPITAL";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "COD_HOSPITAL";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.DataPropertyName = "CNPJ_HOSPITAL";
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "NOME_HOSPITAL";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Endereço
-            // 
-            this.Endereço.DataPropertyName = "END_HOSPITA";
-            this.Endereço.HeaderText = "Endereço";
-            this.Endereço.Name = "Endereço";
             // 
             // Hospital
             // 

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaisOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValidadVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,11 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaisOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValidadVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +59,38 @@
             this.ValidadVacina});
             this.dataGridView1.Location = new System.Drawing.Point(12, 199);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(581, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 245);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "COD_VACINA";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // NomeVacina
+            // 
+            this.NomeVacina.DataPropertyName = "NOME_VACINA";
+            this.NomeVacina.HeaderText = "Nome";
+            this.NomeVacina.Name = "NomeVacina";
+            // 
+            // PaisOrigem
+            // 
+            this.PaisOrigem.DataPropertyName = "PAIS_ORG_VACINA";
+            this.PaisOrigem.HeaderText = "Pais de Origem";
+            this.PaisOrigem.Name = "PaisOrigem";
+            // 
+            // DataFab
+            // 
+            this.DataFab.DataPropertyName = "DATA_FAB_VACINA";
+            this.DataFab.HeaderText = "Data de Fabricação";
+            this.DataFab.Name = "DataFab";
+            // 
+            // ValidadVacina
+            // 
+            this.ValidadVacina.DataPropertyName = "VALID_VACINA";
+            this.ValidadVacina.HeaderText = "Data de Validade";
+            this.ValidadVacina.Name = "ValidadVacina";
             // 
             // label1
             // 
@@ -156,36 +186,6 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Nome";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "COD_VACINA";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // NomeVacina
-            // 
-            this.NomeVacina.DataPropertyName = "NOME_VACINA";
-            this.NomeVacina.HeaderText = "Nome";
-            this.NomeVacina.Name = "NomeVacina";
-            // 
-            // PaisOrigem
-            // 
-            this.PaisOrigem.DataPropertyName = "PAIS_ORG_VACINA";
-            this.PaisOrigem.HeaderText = "Pais de Origem";
-            this.PaisOrigem.Name = "PaisOrigem";
-            // 
-            // DataFab
-            // 
-            this.DataFab.DataPropertyName = "DATA_FAB_VACINA";
-            this.DataFab.HeaderText = "Data de Fabricação";
-            this.DataFab.Name = "DataFab";
-            // 
-            // ValidadVacina
-            // 
-            this.ValidadVacina.DataPropertyName = "VALID_VACINA";
-            this.ValidadVacina.HeaderText = "Data de Validade";
-            this.ValidadVacina.Name = "ValidadVacina";
             // 
             // Vacina
             // 

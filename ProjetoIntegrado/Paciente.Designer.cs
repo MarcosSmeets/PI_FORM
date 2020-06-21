@@ -45,6 +45,9 @@
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Endereço = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValidadeVacina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hospital = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,10 +143,13 @@
             this.CPF,
             this.Nome,
             this.Endereço,
-            this.DataNascimento});
+            this.DataNascimento,
+            this.Vacina,
+            this.ValidadeVacina,
+            this.Hospital});
             this.dataGridView1.Location = new System.Drawing.Point(12, 162);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(577, 276);
+            this.dataGridView1.Size = new System.Drawing.Size(844, 276);
             this.dataGridView1.TabIndex = 15;
             // 
             // label5
@@ -187,11 +193,29 @@
             this.DataNascimento.HeaderText = "DataNascimento";
             this.DataNascimento.Name = "DataNascimento";
             // 
+            // Vacina
+            // 
+            this.Vacina.DataPropertyName = "COD_HOSPITAL";
+            this.Vacina.HeaderText = "Vacina";
+            this.Vacina.Name = "Vacina";
+            // 
+            // ValidadeVacina
+            // 
+            this.ValidadeVacina.DataPropertyName = "VALID_VACINA";
+            this.ValidadeVacina.HeaderText = "Validade Vacina";
+            this.ValidadeVacina.Name = "ValidadeVacina";
+            // 
+            // Hospital
+            // 
+            this.Hospital.DataPropertyName = "COD_HOSPITAL";
+            this.Hospital.HeaderText = "Hospital";
+            this.Hospital.Name = "Hospital";
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -232,5 +256,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Endereço;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataNascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vacina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValidadeVacina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hospital;
     }
 }
