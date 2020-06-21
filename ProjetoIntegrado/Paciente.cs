@@ -51,7 +51,8 @@ namespace ProjetoIntegrado
             }
             catch
             {
-                MessageBox.Show("Paciente não Cadastrado");
+                MessageBox.Show("Paciente não Cadastrado Ou Dados incorretos");
+
             }
             
 

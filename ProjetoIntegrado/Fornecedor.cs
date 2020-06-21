@@ -45,7 +45,15 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM Fornecedor ORDER BY COD_FORNECEDOR", mConn);
+            
+            try
+            {
+                mAdapter = new MySqlDataAdapter("SELECT * FROM Fornecedor WHERE upper(NOME_FORNECEDOR) upper({txtNome.Text})", mConn);
+            }
+            catch
+            {
+                MessageBox.Show("Fornecedor não cadastrado.");
+            }
 
             mAdapter.Fill(mDataSet, "fornecedor");
 

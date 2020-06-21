@@ -195,7 +195,7 @@
             // 
             // Vacina
             // 
-            this.Vacina.DataPropertyName = "COD_HOSPITAL";
+            this.Vacina.DataPropertyName = "NOME_VACINA";
             this.Vacina.HeaderText = "Vacina";
             this.Vacina.Name = "Vacina";
             // 
@@ -207,7 +207,7 @@
             // 
             // Hospital
             // 
-            this.Hospital.DataPropertyName = "COD_HOSPITAL";
+            this.Hospital.DataPropertyName = "NOME_HOSPITAL";
             this.Hospital.HeaderText = "Hospital";
             this.Hospital.Name = "Hospital";
             // 

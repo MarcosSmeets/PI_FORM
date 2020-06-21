@@ -46,7 +46,15 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM VACINA ORDER BY COD_VACINA", mConn);
+            
+            try
+            {
+                mAdapter = new MySqlDataAdapter("SELECT * FROM VACINA WHERE upper(NOME_VACINA) like upper({txtNome.Text})", mConn);
+            }
+            catch
+            {
+                MessageBox.Show("Vacina não cadastrada.");
+            }
 
             mAdapter.Fill(mDataSet, "vacina");
 

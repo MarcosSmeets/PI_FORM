@@ -47,7 +47,15 @@ namespace ProjetoIntegrado
 
             mConn.Open();
 
-            mAdapter = new MySqlDataAdapter("SELECT * FROM Hospital ORDER BY COD_HOSPITAL", mConn);
+            
+            try
+            {
+                mAdapter = new MySqlDataAdapter("SELECT * FROM Hospital WHERE upper (NOME_HOSPITAL) upper ({txtNome.Text})", mConn);
+            }
+            catch
+            {
+                MessageBox.Show("Hospital não cadastrado.");
+            }
 
             mAdapter.Fill(mDataSet,"hospital");
 
